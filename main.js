@@ -39,3 +39,12 @@ var Vechile={
  var execute=Vechile.getVehicleName();
 execute=execute.bind(Vechile);
 execute();
+
+function taxcalculator(percentage){
+    return function(amount){
+        return amount*percentage
+    }
+}
+
+var calculator=taxcalculator(.12);
+console.log(calculator(200));
